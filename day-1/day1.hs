@@ -3,6 +3,10 @@ module Main where
 import Data.List.Split
 import qualified Data.IntSet as IntSet
 
+parseNum :: String -> Int
+parseNum (x:xs) | x == '+' = read xs
+                | x == '-' = -1 * read xs
+
 
 main :: IO ()
 main = do
